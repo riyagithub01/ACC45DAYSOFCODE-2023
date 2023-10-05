@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int digits(int num2){
+    int sum=0;
+    while(num2!=0){
+       int digit=num2%10;
+       sum+=digit;
+       num2=num2/10;
+    }
+    return sum;
+}
+ 
+void solve(){
+    
+    int n;
+    cin>>n;
+    
+    int find=digits(n);
+    int num=0;
+    while(1){
+        if(find%2==0){
+           num=digits(n+1);
+            n=n+1;
+           if(num%2==1){
+               cout<<n<<endl;
+               break;
+           }
+          
+        }
+        else{
+             
+            num=digits(n+1);
+            n=n+1;
+             if(num%2==0){
+               cout<<n<<endl;
+               break;
+           }
+          
+        }
+        
+    }
+    
+}
+int main() {
+    int n;
+    cin>>n;
+    while(n--){
+        solve();
+    }
+	return 0;
+}
