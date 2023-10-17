@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    int c,x,y,a;
+	    cin>>c>>x>>y;
+	    a=c-x;
+	    cout<<a*y<<endl;
+	    
+	    
+	}
+	return 0;
+}
